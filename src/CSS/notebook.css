@@ -1,0 +1,31 @@
+.notebook-container{
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+}
+.notebook-container h3{
+ margin-inline: .9rem;   
+ color: var(--darker);
+}
+.button-wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+.button-wrapper button{
+    color: var(--darker);
+}
+.selected-notebook{
+    color: var(--light);
+    background-color: var(--darker);
+    border-top: 5px solid var(--btn-color);
+}
+.selected-notebook h3{
+    color: var(--light);
+}
+.selected-notebook button{
+    color: var(--light);
+}
+
+
+

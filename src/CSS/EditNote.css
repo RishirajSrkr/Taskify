@@ -1,0 +1,95 @@
+.addnote-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 5px solid var(--btn-color);
+
+}
+input,
+textarea {
+    min-width: 100%;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    outline: none;
+    background-color: var(--dark);
+    border: none;
+    color: var(--light);
+}
+input::placeholder, textarea::placeholder{
+    color: var(--darker);
+}
+
+input{
+    font-weight: 800;
+    font-size: 1.6rem;
+}
+textarea {
+    resize: none;
+    border-top: 1px solid var(--darker);
+    min-height: 300px;
+    font-weight: 500;
+}
+
+.form-btn-wrapper{
+    position: absolute;
+    bottom: 6%;
+    right: 5%;
+    display: flex;
+    gap: .3rem;
+}
+.save-btn{
+    font-size: 1rem;
+    color: var(--light);
+    padding: 5px 15px;
+    background-color: #00a7c0;
+}
+.cancel-btn{
+    font-size: 1rem;
+    padding: 5px 15px;
+    background-color: var(--dark);
+    border: 1px solid var(--btn-color);
+    color: var(--btn-color);
+}
+
+
+.cancel-btn-white{
+    font-size: 1rem;
+    padding: 5px 15px;
+    background-color: transparent;
+    border: 1px solid var(--light);
+    color:var(--light);
+}
+
+
+.exit-confirmation-wrapper{
+    font-size: 1.2rem;
+    position: absolute;
+    background-color: var(--mid);
+    padding: 30px 70px;
+    border-radius: 10px;
+    color: #eafffe;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error{
+    color: var(--btn-color);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+.error-pos-editnote{
+    position: absolute;
+    bottom: 7%;
+    left: 5%;
+}

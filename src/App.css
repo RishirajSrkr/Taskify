@@ -1,0 +1,40 @@
+/* #00eeff */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Satoshi', sans-serif;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+:root{
+    /* --dark:#172A46; */
+    --dark: #0A192F;
+    --darker: #061020;
+    --light: #f6f6f9;
+    --mid: #585673;
+    --btn-color: #00a7c0;
+}
+#root{
+    display: flex;
+    background-color: var(--darker);
+}
+
+
+/* utility classes */
+
+.transparent_icons{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+button{
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
