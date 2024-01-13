@@ -36,5 +36,29 @@ button{
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    transition: all ease .1s;
 }
+button:hover{
+    opacity: .9;
+}
+button:active{
+    opacity: .7;
+}
+.error{
+    color: var(--btn-color);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: .5rem;
 
+}
+.error-pos-editnote{
+    position: absolute;
+    bottom: 7%;
+    left: 5%;
+}
+.notebook-name-error{
+   margin-top: 1rem;
+   padding: 0;
+}

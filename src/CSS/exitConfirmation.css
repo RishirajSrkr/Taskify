@@ -1,0 +1,31 @@
+.exit-confirmation-wrapper{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    position: absolute;
+    background-color: var(--darker);
+    padding: 40px;
+    border: 1px solid  var(--btn-color);
+    border-radius: 10px;
+    color: #eafffe;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 1.5rem;
+}
+.exit-confirmation-btn-wrapper{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+   
+}
+.exit-confirmation-btn-wrapper button{
+    padding: 6px 25px;
+}
+.exit-confirmation-btn-wrapper button:nth-child(2){
+   background-color: transparent;
+}

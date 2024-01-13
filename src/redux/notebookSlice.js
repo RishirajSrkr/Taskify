@@ -1,21 +1,33 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import {loadfromlocalstorage} from '../components/localstorage'
+const initialNotebooks = loadfromlocalstorage() || []
 
 const notebookSlice = createSlice({
     name: "notebook",
     initialState: {
-        notebooks: [],
+        notebooks: initialNotebooks,
         currentNotebookId: null,
         selectedNotebookId: null,
         formVisibility: false,
         selectedNoteIndex: null,
+        isEditing: false,
     },
     reducers: {
         addNotebook: (state, action) => {
+            const notebook = action.payload;
             state.notebooks.push(action.payload)
         },
         removeNotebook: (state, action) => {
-            state.filter(notebook => notebook.id !== action.payload)
+            const notebookId = action.payload;
+            state.notebooks =  state.notebooks.filter(notebook => notebook.id !== notebookId)
+        },
+
+        updateNotebookName: (state, action) => {
+            const {notebookId, newName} = action.payload;
+            const notebookToUpdate = state.notebooks.find(notebook => notebook.id === notebookId);
+            if(notebookToUpdate){
+                notebookToUpdate.name = newName;
+            }
         },
 
         addNoteToNotebook: (state, action) => {
@@ -59,12 +71,15 @@ const notebookSlice = createSlice({
                 //update the note with the updated note
                 selectedNotebook.notes[selectedNoteIndex] = { ...selectedNotebook.notes[selectedNoteIndex], ...updatedNote }
             }
+        },
+        setIsEditing: (state, action) => {
+            state.isEditing = action.payload;
         }
 
     }
 })
 
 
-export const { addNotebook, removeNotebook, addNoteToNotebook, setSelectedNotebookId, setFormVisibility, removeNote, setselectedNoteIndex, updateNote } = notebookSlice.actions;
+export const { addNotebook, removeNotebook, addNoteToNotebook, setSelectedNotebookId, setFormVisibility, removeNote, setselectedNoteIndex, updateNote,updateNotebookName,setIsEditing } = notebookSlice.actions;
 
 export default notebookSlice.reducer;

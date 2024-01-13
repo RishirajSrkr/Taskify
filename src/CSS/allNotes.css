@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    overflow: scroll;
 }
 
 .addNote-wrapper {
@@ -28,7 +29,12 @@
     position: relative;
     transition: .2s all ease;
 }
-
+.date-time{
+position: absolute;
+color: white;
+bottom: 1.4rem;
+font-size: .8rem;
+}
 .note-wrapper:hover {
     transform: scale(1.02);
 }

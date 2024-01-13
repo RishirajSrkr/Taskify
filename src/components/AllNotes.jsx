@@ -16,7 +16,7 @@ export default function AllNotes() {
 
   const dispatch = useDispatch();
 
-  const selectedNotebook = notebooks.find(notebook => notebook.id === selectedNotebookId);
+  const selectedNotebook = notebooks?.find(notebook => notebook.id === selectedNotebookId);
 
   const notes = selectedNotebook ? selectedNotebook.notes : [];
 
@@ -46,6 +46,7 @@ export default function AllNotes() {
           <Note
             title={note.title}
             content={note.content}
+            createdAt={note.createdAt}
             handleClickDelete={() => handleDeleteClick(index)}
             handleClickEdit={() => handleEditClick(note, index)}
           />

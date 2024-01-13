@@ -22,9 +22,7 @@ textarea {
     border: none;
     color: var(--light);
 }
-input::placeholder, textarea::placeholder{
-    color: var(--darker);
-}
+
 
 input{
     font-weight: 800;
@@ -67,29 +65,3 @@ textarea {
     color:var(--light);
 }
 
-
-.exit-confirmation-wrapper{
-    font-size: 1.2rem;
-    position: absolute;
-    background-color: var(--mid);
-    padding: 30px 70px;
-    border-radius: 10px;
-    color: #eafffe;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.error{
-    color: var(--btn-color);
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-}
-.error-pos-editnote{
-    position: absolute;
-    bottom: 7%;
-    left: 5%;
-}
