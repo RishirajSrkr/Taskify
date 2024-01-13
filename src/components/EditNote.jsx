@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { MdError } from "react-icons/md";
-import '../CSS/EditNote.css'
+import '../CSS/editNote.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateNote, setFormVisibility } from '../redux/notebookSlice';
 

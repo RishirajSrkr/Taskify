@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import '../CSS/AllNotes.css'
+import '../CSS/allNotes.css'
 import { useSelector, useDispatch } from 'react-redux'
 import Note from './Note';
 import AddNote from './AddNote';
