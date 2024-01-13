@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import '../CSS/NavPanel.css'
+import '../CSS/navPanel.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { addNoteToNotebook, addNotebook, setFormVisibility, setIsEditing, setSelectedNotebookId, updateNotebookName } from '../redux/notebookSlice';
 import NoteBook from './NoteBook';
