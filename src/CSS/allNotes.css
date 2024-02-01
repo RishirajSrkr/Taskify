@@ -1,18 +1,21 @@
 .allNotes-wrapper {
     width: 100%;
-    height: 100vh;
     display: flex;
+    display: flex;
+    align-items: start;
+    justify-content: center;
     flex-wrap: wrap;
     position: relative;
     overflow: scroll;
+    height: 100vh;
 }
 
 .addNote-wrapper {
     width: 50%;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-25%, -50%);
 
 }
 
@@ -28,18 +31,14 @@
     cursor: pointer;
     position: relative;
     transition: .2s all ease;
- 
+
 }
-.note-wrapper > div{
+
+.note-wrapper>div {
     display: flex;
     flex-direction: column;
 }
-.date-time{
-position: absolute;
-color: white;
-bottom: 1.4rem;
-font-size: .8rem;
-}
+
 .note-wrapper:hover {
     transform: scale(1.02);
 }
@@ -86,20 +85,25 @@ font-size: .8rem;
 
 
 @media (max-width:600px) {
-    .addNote-wrapper{
-        width: 100%;
+    .addNote-wrapper {
+        width: 90%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 5px solid var(--btn-color);
     }
 
-    .note-wrapper {
+        .note-wrapper {
 
-        width: 100%;
-        height: 250px;
-        border-top: 5px solid var(--btn-color);
-        padding: 1rem;
-        overflow: scroll;
-        cursor: pointer;
-        position: relative;
-        transition: .2s all ease;
-     
+            width: 100%;
+            height: 250px;
+            border-top: 5px solid var(--btn-color);
+            padding: 1rem;
+            overflow: scroll;
+            cursor: pointer;
+            position: relative;
+            transition: .2s all ease;
+
+        }
     }
-}

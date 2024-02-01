@@ -54,10 +54,6 @@ export default function AddNote() {
         setShowCancelConfirmation(false)
     }
 
-
-
-    console.log("Add Note");
-
     return (
         <div className='addnote-wrapper'>
             <form className='form-wrapper'>
