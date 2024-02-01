@@ -14,7 +14,6 @@ export default function NoteBook({ notebook, setshowform }) {
     const handleNotebookClick = () => {
 
          const selectedNotebook = notebooks.find(notebook => notebook.id === selectedNotebookId)
-        console.log(selectedNotebook);
         dispatch(setSelectedNotebookId(notebook.id))
     }
 

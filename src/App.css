@@ -1,15 +1,17 @@
 /* #00eeff */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Satoshi', sans-serif;
 }
-*::-webkit-scrollbar{
+
+*::-webkit-scrollbar {
     display: none;
 }
-:root{
+
+:root {
     /* --dark:#172A46; */
     --dark: #0A192F;
     --darker: #061020;
@@ -17,34 +19,40 @@
     --mid: #585673;
     --btn-color: #00a7c0;
 }
+
 #root{
-    display: flex;
     background-color: var(--darker);
+}
+#root div:first-child{
+    display: flex;
 }
 
 
 /* utility classes */
 
-.transparent_icons{
+.transparent_icons {
     background-color: transparent;
     border: none;
     outline: none;
 }
 
 
-button{
+button {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     transition: all ease .1s;
 }
-button:hover{
+
+button:hover {
     opacity: .9;
 }
-button:active{
+
+button:active {
     opacity: .7;
 }
-.error{
+
+.error {
     color: var(--btn-color);
     font-size: 1.1rem;
     display: flex;
@@ -53,12 +61,43 @@ button:active{
     gap: .5rem;
 
 }
-.error-pos-editnote{
+
+.error-pos-editnote {
     position: absolute;
     bottom: 7%;
     left: 5%;
 }
-.notebook-name-error{
-   margin-top: 1rem;
-   padding: 0;
+
+.notebook-name-error {
+    margin-top: 1rem;
+    padding: 0;
+}
+
+
+@media (max-width: 600px) {
+    #root > div{
+        padding: 5%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menuBtn {
+        position: fixed;
+        z-index: 1000;
+        padding: 0;
+        color: white;
+        background-color: var(--darker);
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: 0;
+    }
+
 }

@@ -5,6 +5,7 @@ import { MdError } from "react-icons/md";
 import { addNoteToNotebook, setFormVisibility } from '../redux/notebookSlice';
 import ExitConfirmation from './ExitConfirmation';
 export default function AddNote() {
+    
     const [input, setinput] = useState({
         title: "",
         content: "",
@@ -53,6 +54,9 @@ export default function AddNote() {
         setShowCancelConfirmation(false)
     }
 
+
+
+    console.log("Add Note");
 
     return (
         <div className='addnote-wrapper'>

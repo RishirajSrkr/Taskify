@@ -28,6 +28,11 @@
     cursor: pointer;
     position: relative;
     transition: .2s all ease;
+ 
+}
+.note-wrapper > div{
+    display: flex;
+    flex-direction: column;
 }
 .date-time{
 position: absolute;

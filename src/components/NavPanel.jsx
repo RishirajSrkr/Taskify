@@ -8,7 +8,7 @@ import { MdError } from "react-icons/md";
 import { MdOutlineDone } from "react-icons/md";
 import { savetolocalstorage } from '../components/localstorage'
 
-export default function NavPanel() {
+export default function NavPanel({menuBtnHandler}) {
 
     const dispatch = useDispatch();
 
@@ -57,6 +57,13 @@ export default function NavPanel() {
         }
         else
             dispatch(setFormVisibility(true));
+
+
+        if(window.innerWidth < 600 && selectedNotebookId){
+            console.log("600");
+            menuBtnHandler();
+
+        }
     }
 
 
@@ -101,9 +108,11 @@ export default function NavPanel() {
     }, [notebooks])
 
 
-    //KEEPING TRACK OF SELECTED NOTEBOOK ID, WHEN
+ 
+
     return (
-        <div className='navPanel-wrapper'>
+        <div className='navPanel-wrapper' id='sidebar'>
+
             <button className='new-note-btn' onClick={newNoteHandler}>New Note</button>
 
             {/* ---Displaying error message--- */}
@@ -118,7 +127,7 @@ export default function NavPanel() {
 
             {/* ---input field for adding notebook name--- */}
             {showform && <div className='notebook-name-input-wrapper'>
-                <div style={{ display: "flex", justifyContent: "center" }}>
+                <div style={{ display: "flex", justifyContent: "center", width:"100%" }}>
                     <input className='notebook-name-input' type="text" placeholder={`${selectedNotebookId ? 'Updated Name?' : 'Notebook Name?'}`}
                         onKeyDown={handleKeyDown}
                         onChange={(e) => setinput(e.target.value)} />

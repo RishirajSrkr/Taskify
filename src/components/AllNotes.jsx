@@ -46,7 +46,6 @@ export default function AllNotes() {
           <Note
             title={note.title}
             content={note.content}
-            createdAt={note.createdAt}
             handleClickDelete={() => handleDeleteClick(index)}
             handleClickEdit={() => handleEditClick(note, index)}
           />
