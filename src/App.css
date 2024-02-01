@@ -75,6 +75,10 @@ button:active {
 
 
 @media (max-width: 600px) {
+
+    body{
+        user-select: none;
+    }
     #root > div{
         padding: 5%;
         position: relative;
