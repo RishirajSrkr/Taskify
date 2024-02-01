@@ -83,3 +83,23 @@ font-size: .8rem;
     font-size: .8rem;
     color: var(--light);
 }
+
+
+@media (max-width:600px) {
+    .addNote-wrapper{
+        width: 100%;
+    }
+
+    .note-wrapper {
+
+        width: 100%;
+        height: 250px;
+        border-top: 5px solid var(--btn-color);
+        padding: 1rem;
+        overflow: scroll;
+        cursor: pointer;
+        position: relative;
+        transition: .2s all ease;
+     
+    }
+}

@@ -141,11 +141,11 @@ export default function NavPanel({menuBtnHandler}) {
             </div>}
 
 
-            {/* here we will use state to display all the notes */}
+            {/* here we will use state to display all the notebook */}
             {
                 notebooks?.map((notebook) => (
                     <div className='notebook-wrapper' key={notebook.id}>
-                        <NoteBook notebook={notebook} setshowform={setshowform} />
+                        <NoteBook notebook={notebook} setshowform={setshowform} menuBtnHandler={menuBtnHandler} />
                     </div>
                 ))
             }

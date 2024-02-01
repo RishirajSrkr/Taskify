@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { removeNotebook, setIsEditing, setSelectedNotebookId, updateNotebookName } from '../redux/notebookSlice'
 import '../CSS/notebook.css'
 
-export default function NoteBook({ notebook, setshowform }) {
+export default function NoteBook({ notebook, setshowform, menuBtnHandler}) {
     const dispatch = useDispatch();
     const { notebooks, selectedNotebookId, isEditing } = useSelector((state) => state.notebook)
 
@@ -15,6 +15,14 @@ export default function NoteBook({ notebook, setshowform }) {
 
          const selectedNotebook = notebooks.find(notebook => notebook.id === selectedNotebookId)
         dispatch(setSelectedNotebookId(notebook.id))
+
+
+
+        if(window.innerWidth < 600 && selectedNotebookId){
+            console.log("600");
+            menuBtnHandler();
+
+        }
     }
 
     const handleDelete = () => {

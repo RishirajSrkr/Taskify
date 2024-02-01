@@ -29,3 +29,11 @@
 .exit-confirmation-btn-wrapper button:nth-child(2){
    background-color: transparent;
 }
+
+
+@media (max-width:600px) {
+    .exit-confirmation-wrapper{
+    padding: 30px;
+    width: 70%;
+    }
+}

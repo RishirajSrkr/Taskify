@@ -75,6 +75,9 @@ textarea {
 
 
 @media (max-width: 600px){
-
+    input::placeholder, textarea::placeholder{
+        font-size: 1rem;
+        color: var(--mid)
+    }
     
 }
