@@ -1,8 +1,13 @@
-# React + Vite
+**Description**
+Taskify is a React-powered application designed to seamlessly create, organize, and manage notes across multiple custom notebooks. The app offers a user-friendly interface and efficient note management features, making it easy to keep your thoughts and tasks organized.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Features**
+Create Notes: Quickly create notes with a simple and intuitive interface.
+Organize Notes: Categorize notes into multiple custom notebooks for easy access and management.
+Manage Notes: Edit, delete, and organize notes efficiently.
 
-Currently, two official plugins are available:
+**Tech Stack**
+Frontend: React
+State Management: Redux
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Live** https://rishiraj-taskify.vercel.app/
